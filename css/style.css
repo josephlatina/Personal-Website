@@ -1,0 +1,106 @@
+/*+++++++++++++++++++
+
+/* BOX MODEL FIX */
+html {
+    box-sizing: border-box;
+   }
+   *, *:before, *:after {
+    box-sizing: inherit;
+   }
+
+/* CLEAR FIX */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*+++++++++++++++++++*/
+
+@-ms-viewport {
+	width: device-width;
+}
+@viewport {
+	width: device-width;
+}
+
+/*+++++++++++++++++++ MEDIA QUERY FOR SMALL +++++++++++++++++++ */
+
+
+/*+++++++++++++++++++ MEDIA QUERY FOR LARGE +++++++++++++++++++ */
+
+
+/*+++++++++++++++++++ GLOBAL STYLES +++++++++++++++++++ */
+.button {
+    width: 180px;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    display: table;
+    margin: 0 auto;
+}
+.button:hover {
+    background-color: #E3B782;
+    border: 2px solid #E3B782;
+    color: white;
+    transition-duration: 0.8s;
+    transition-timing-function: ease;
+}
+
+
+/*+++++++++++++++++++ HEADER +++++++++++++++++++ */
+
+
+/*+++++++++++++++++++ FOOTER +++++++++++++++++++ */
+
+
+/*+++++++++++++++++++ LANDING PAGE +++++++++++++++++++ */
+body {
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+header {
+    position: relative;
+}
+
+header h3 {
+    position: absolute;
+    top: 30px;
+    margin-left: 20px;
+}
+
+section {
+    height: 100vh;
+}
+
+#landing-page {
+    background-color: #252821;
+    color: white;
+
+}
+
+#landing-page div {
+    margin: 0 auto;
+}
+
+#landing-page-2 h1 {
+    color: #E3B782;
+    text-align: left;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
