@@ -27,12 +27,76 @@ html {
 }
 
 /*+++++++++++++++++++ MEDIA QUERY FOR SMALL +++++++++++++++++++ */
-
+@media only screen and (min-width: 1px) and (max-width: 991px) {
+    #about h1, .line {
+        text-align: center;
+        margin: 0 auto;
+    }
+    #contact h1 {
+        text-align: center;
+    }
+    #nav-lg {
+        display: none;
+    }
+    #projects h1, p {
+        text-align: center;
+    }
+    #project-contents h1, h3 {
+        text-align: center;
+    }
+    .mobile-small {
+        text-align: center;
+    }
+    header .navbar-toggler {
+        margin-left: 100%;
+        position: absolute;
+        top: -50px;
+        right: -7.5%;
+        z-index: 30;
+    }
+    .navbar-nav {
+      text-transform: uppercase;
+      display: inline;
+    }
+    .navbar-nav > li{
+      display: inline-block;
+    }
+    .navbar ul {
+      list-style-type: none;
+      padding: 100;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+}
 
 /*+++++++++++++++++++ MEDIA QUERY FOR LARGE +++++++++++++++++++ */
-
+@media only screen and (min-width: 992px){
+    #nav-sm {
+        display: none;
+    }
+    .mobile-small {
+        display: none;
+    }
+}
 
 /*+++++++++++++++++++ GLOBAL STYLES +++++++++++++++++++ */
+section {
+    margin-bottom: 50px;
+}
+.animate-delay {
+    animation-delay: 0.5s;
+}
+.animate__animated.animate__fadeInRight {
+    animation-delay: 0.5s;
+}
+
+.animate__animated.animate__fadeInRight {
+    animation-delay: 1.5s;
+}
+
 .button {
     width: 180px;
     text-align: center;
@@ -51,56 +115,342 @@ html {
     transition-timing-function: ease;
 }
 
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.center-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.line {
+    width: 80px;
+    border-bottom: 4px solid black;
+    text-align: center;
+}
+
+.loader {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border: 4px solid #252821;
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #252821;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thin-line {
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+}
+
+@keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+}
+  @keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+}
 
 /*+++++++++++++++++++ HEADER +++++++++++++++++++ */
+header {
+    height: 200px;
+}
+header .logo {
+    position: absolute;
+    z-index: 10;
+    top: 80px;
+}
+header h1:hover {
+    color: #252821;
+}
+header li {
+    color: #252821;
+    display: inline; 
+    padding: 20px;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #252821;
+}
+header li a:visited {
+    color: #252821;
+}
+header li a:hover{
+    color: tan;
+    cursor: pointer;
+}
+nav {
+    text-align: right;
+    position: absolute;
+    top: 100px;
+    right: 9.75%;
+}
+.full-nav {
+    background: linear-gradient( rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95));
+    transform: translateY(-25%);
+    transform:scale(200%);
+    top: 0;
+    text-align: center;
+    position: absolute;
+    width: 120%;
+    transition:all 0.3s cubic-bezier(0.23, 1, .32, 1);
+    z-index: 20;
+}
+.full-nav li {
+    margin-top: 50px;
+}
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
 
-
+.navbar-toggler.navbar-toggler {
+    border-color: black;
+    border-width: 2px;
+} 
 /*+++++++++++++++++++ FOOTER +++++++++++++++++++ */
 
 
 /*+++++++++++++++++++ LANDING PAGE +++++++++++++++++++ */
-body {
+#landing-page {
     height: 100%;
     margin: 0;
-}
-
-h1 {
-    text-align: center;
-}
-
-header {
-    position: relative;
-}
-
-header h3 {
-    position: absolute;
-    top: 30px;
-    margin-left: 20px;
-}
-
-section {
-    height: 100vh;
-}
-
-#landing-page {
     background-color: #252821;
     color: white;
-
 }
 
 #landing-page div {
     margin: 0 auto;
 }
 
+#landing-page h1 {
+    text-align: center;
+}
+
+#landing-page header {
+    position: relative;
+    height: 100px;
+}
+
+#landing-page header h3 {
+    position: absolute;
+    top: 30px;
+    margin-left: 20px;
+}
+
+#landing-page section {
+    height: 100vh;
+}
+
+#landing-page-2 a {
+    text-decoration: none;
+}
+
+#landing-page-2 a:hover {
+    transform: translateX(50px);
+    transition-duration: 0.6s;
+    /* transition-timing-function: cubic-bezier(0.2, 0.6, 0.2, 1); */
+}
+
 #landing-page-2 h1 {
     color: #E3B782;
+    font-size: 400%;
     text-align: left;
+    font-weight: 600;
+    width: 100vw;
+    margin-bottom: 150px;
+    margin-right: 20px;
 }
 
-.center {
+#landing-page-2 h1:hover {
+    color: white;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+
+/*+++++++++++++++++++ ABOUT PAGE +++++++++++++++++++ */
+.about-content {
+    padding: 40px;
+}
+
+.about-content h3 {
+    color: #E3B782;
+}
+
+#about .thin-line {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#about-resource a {
+    text-decoration: underline;
+}
+
+#about-resource {
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+}
+
+
+/*+++++++++++++++++++ PROJECTS PAGE +++++++++++++++++++ */
+#projects p {
+    color: grey;
+    font-weight: 300;
+}
+
+#projects-grid__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.projects-grid {
+    position: relative;
+    padding: 0;
+    margin: 20px;
+}
+
+.projects-grid img {
+    display: block;
+    max-width: 100%;
+    max-height: 600px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.screen-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(2px);
+    opacity: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    height: 100%;
+    transition: opacity 0.5s;
+    color: white;
 }
 
+.screen-overlay:hover {
+    opacity: 1;
+}
+
+.screen-overlay:hover > * {
+    transform: translateY(-20px);
+    transition: transform 0.9s;
+}
+
+/*+++++++++++++++++++ SUB-PROJECTS PAGE +++++++++++++++++++ */
+#project-contents .center {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#project-contents .center-row img {
+    max-height: 800px;
+    object-fit: contain;
+}
+
+#project-contents .center img {
+    max-height: 3000px;
+    object-fit: contain;
+}
+
+#resource a {
+    font-weight: bold;
+    color: grey;
+}
+
+/*+++++++++++++++++++ PHOTOGRPAHY PAGE +++++++++++++++++++ */
+#photography img {
+    padding: 10px;
+    padding-left: 20px;
+    object-fit: cover;
+}
+
+/*+++++++++++++++++++ CONTACTS PAGE +++++++++++++++++++ */
+input {
+    height: 35px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 90%;
+    border: 1px solid lightgrey;
+}
+
+label {
+    font-size: 90%;
+}
+
+#contact-form h3 {
+    margin-top: 5px;
+    color: #E3B782;
+}
+
+#message {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 90%;
+    border: 1px solid lightgrey;
+    height: 200px;
+}
+
+#submit-button {
+    width: 150px;
+    text-align: center;
+    padding: 12px;
+    background-color: #252821;
+    color: white;
+    border: 2px solid #252821;
+    text-decoration: none;
+}
+
+#submit-button:hover {
+    background-color: #E3B782;
+    border: 2px solid #E3B782;
+    color: white;
+    transition-duration: 0.8s;
+    transition-timing-function: ease;
+}
