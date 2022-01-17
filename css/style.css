@@ -35,6 +35,9 @@ html {
     #contact h1 {
         text-align: center;
     }
+    #landing-options a{
+        font-size: 50%;
+    }
     #nav-lg {
         display: none;
     }
@@ -186,6 +189,145 @@ section {
     100% { height: 0%;}
 }
 
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: -35px;
+  left: 100%;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #252821;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #fff;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  margin: -100px 0 0 calc(-100vw + 150%);
+  
+  background: #252821;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% -100%;
+  transform: translate(0, -100%);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu a {
+    margin: 30px;
+}
+
+#menu li
+{
+  padding: 50px 0;
+  font-size: 30px;
+  color: #E3B782;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
 /*+++++++++++++++++++ HEADER +++++++++++++++++++ */
 header {
     height: 200px;
@@ -193,7 +335,7 @@ header {
 header .logo {
     position: absolute;
     z-index: 10;
-    top: 80px;
+    top: 70px;
 }
 header h1:hover {
     color: #252821;
@@ -223,28 +365,6 @@ nav {
     top: 100px;
     right: 9.75%;
 }
-.full-nav {
-    background: linear-gradient( rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95));
-    transform: translateY(-25%);
-    transform:scale(200%);
-    top: 0;
-    text-align: center;
-    position: absolute;
-    width: 120%;
-    transition:all 0.3s cubic-bezier(0.23, 1, .32, 1);
-    z-index: 20;
-}
-.full-nav li {
-    margin-top: 50px;
-}
-.navbar-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.navbar-toggler.navbar-toggler {
-    border-color: black;
-    border-width: 2px;
-} 
 /*+++++++++++++++++++ FOOTER +++++++++++++++++++ */
 
 
