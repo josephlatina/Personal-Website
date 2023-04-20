@@ -524,6 +524,16 @@ nav {
     color: grey;
 }
 
+.mockup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mockup img {
+    height: 100%;
+}
+
 /*+++++++++++++++++++ PHOTOGRPAHY PAGE +++++++++++++++++++ */
 #photography img {
     padding: 10px;
