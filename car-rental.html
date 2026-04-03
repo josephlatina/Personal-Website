@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Web Application</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+		rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+        crossorigin="anonymous">
+    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body style="font-family: 'Poppins', sans-serif;" id="project-contents">
+     <!-- Header -->
+     <header class="container">
+        <div class="logo">
+            <a href="index.html"><h1>Joseph Latina</h1></a>
+        </div>
+        <div id="nav-lg">
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="photography/photography.html">Photography</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="nav-sm">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                      <a href="about.html"><li>About</li></a>
+                      <a href="projects.html"><li>Projects</li></a>
+                      <a href="photography/photography.html"><li>Photography</li></a>
+                      <a href="contact.html"><li>Contact</li></a>
+                    </ul>
+                  </div>
+              </nav>
+        </div>
+    </header>
+
+    <!-- Title -->
+    <section class="container">
+        <div class="row">
+            <div>
+                <h1>Car Rental Web Application</h1>
+                <div class="line"></div>
+                <br>
+                <p>Web Application Project</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jumbotron -->
+    <section class="container">
+        <div class="row">
+            <img class="col-12" src="images/car-rental/mockup-1.png">
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="container">
+        <div class="row">
+            <h3>About this project</h3>
+            <p>The project involves creating a car rental web application
+                that allows admin users to process rental reservations, car information and customer profiles. 
+                It also allows client users to check for available cars, filter them and make a rental
+                reservation. The entire product was created with a group of 5.
+            </p>
+        </div>
+    </section>
+
+    <!-- Tools -->
+    <section class="container">
+        <div class="row">
+            <h3>Tools</h3>
+            <p>Django <br>
+                React <br>
+                MySQL <br>
+                Git <br>
+                Figma <br>
+                Visual Studio Code
+            </p>
+        </div>
+    </section>
+
+    <!-- Walkthrough -->
+    <section class="container">
+        <div class="row">
+            <h3>Walkthrough</h3>
+            <!-- Wireframe -->
+            <div class="center-row">
+                <img class="col-3" src="images/car-rental/wireframe-1.png">
+                <img class="col-3" src="images/car-rental/wireframe-2.png">
+                <img class="col-3" src="images/car-rental/wireframe-3.png">
+            </div>
+            <div class="center">
+                <p>Responsive Wireframe for Car Selection Page</p>
+            </div>
+            <!-- Client -->
+            <div class="center">
+                <div class="col-12 mockup center-row">
+                    <img class="col-3" src="images/car-rental/client-mockup-1.png">
+                    <img class="col-3" src="images/car-rental/client-mockup-2.png">
+                    <img class="col-3" src="images/car-rental/client-mockup-3.png">
+                </div>
+                <h5>Client Side</h5>
+                <br>
+                <p class="col-8">Client users can search for available cars between certain dates and
+                    certain branches. Once results are returned, users can filter through by certain criterias
+                    such as manufacturers, fuel type or car type. There is a gold star membership system that grants
+                    members certain perks such as free upgrades when a criteria is met. Once a reservation is created and
+                    a database change is made, the client interface dynamically changes.
+                </p>
+            </div>
+            <!-- Admin -->
+            <div class="center">
+                <div class="col-12 mockup center-row">
+                    <img class="col-3" src="images/car-rental/admin-mockup-1.png">
+                    <img class="col-3" src="images/car-rental/admin-mockup-2.png">
+                    <img class="col-3" src="images/car-rental/admin-mockup-3.png">
+                </div>
+                <h5>Admin Side</h5>
+                <br>
+                <p class="col-8">There is also an admin interface that users can only access
+                    if they provide authentication credentials for an admin upon login. For each branch table created in 
+                    the database, admins can process rental reservations and calculate any late fees upon return of vehicles.
+                    Admins can also update car information, transfer cars between branches and maintain a list of customers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource -->
+    <section class="container" id="resource">
+        <div class="row">
+            <h3>Resource</h3>
+            <ul>
+                <li>
+                    <p>Code Repository can be accessed in <span><a href="https://github.com/josephlatina/CarRentalApp">GITHUB</a></span></p>
+                </li>
+            </ul>
+            
+            </p>
+        </div>
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <script>
+        $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+    
+</body>
+
+
+</html>
